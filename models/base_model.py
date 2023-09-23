@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """This is the base model class for the AirBnB"""
+=======
+"""This is the base model class for AirBnB"""
+>>>>>>> 744e6d1d2dbae52e94b5e5fa3365be7ad8fc169e
 from sqlalchemy.ext.declarative import declarative_base
 import uuid
 import models
@@ -10,6 +14,10 @@ from sqlalchemy import Column, Integer, String, DateTime
 Base = declarative_base()
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 744e6d1d2dbae52e94b5e5fa3365be7ad8fc169e
 class BaseModel:
     """This class will defines all common attributes/methods
     for other classes
@@ -19,6 +27,7 @@ class BaseModel:
     updated_at = Column(DateTime, nullable=False, default=(datetime.utcnow()))
 
     def __init__(self, *args, **kwargs):
+<<<<<<< HEAD
         """Instantiation of the base model class
         Args:
             args: it won't be used
@@ -27,6 +36,16 @@ class BaseModel:
             id: unique id generated
             created_at:the creation date
             updated_at:the updated date
+=======
+        """Instantiation of base model class
+        Args:
+            args: won't be useful
+            kwargs: arguments for the constructor of the BaseModel
+        Attributes:
+            id: unique id generated
+            created_at: creats date
+            updated_at: updated date
+>>>>>>> 744e6d1d2dbae52e94b5e5fa3365be7ad8fc169e
         """
         if kwargs:
             for key, value in kwargs.items():
@@ -45,15 +64,25 @@ class BaseModel:
             self.created_at = self.updated_at = datetime.now()
 
     def __str__(self):
+<<<<<<< HEAD
         """returns the string
         Return:
             returns the string of class name, id, and dictionary
+=======
+        """returns a string
+        Return:
+            returns a string of class name, id, and dictionary
+>>>>>>> 744e6d1d2dbae52e94b5e5fa3365be7ad8fc169e
         """
         return "[{}] ({}) {}".format(
             type(self).__name__, self.id, self.__dict__)
 
     def __repr__(self):
+<<<<<<< HEAD
         """return the string representaion
+=======
+        """return a string representaion
+>>>>>>> 744e6d1d2dbae52e94b5e5fa3365be7ad8fc169e
         """
         return self.__str__()
 
@@ -65,9 +94,15 @@ class BaseModel:
         models.storage.save()
 
     def to_dict(self):
+<<<<<<< HEAD
         """creates dictionary of the class and returns
         Return:
             returns a dictionary of all the key values in __dict__
+=======
+        """creates dictionary for the class  and returns
+        Return:
+            returns a dictionary for all the key values in __dict__
+>>>>>>> 744e6d1d2dbae52e94b5e5fa3365be7ad8fc169e
         """
         my_dict = dict(self.__dict__)
         my_dict["__class__"] = str(type(self).__name__)

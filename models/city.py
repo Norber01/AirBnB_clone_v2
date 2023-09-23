@@ -8,11 +8,20 @@ from sqlalchemy.orm import relationship
 from models.place import Place
 
 
+<<<<<<< HEAD
 class City(BaseModel, Base):
     """This is the class for the City
     Attributes:
         state_id: The state id
         name: the input name
+=======
+
+class City(BaseModel, Base):
+    """This is a class for City
+    Attributes:
+        state_id: The state id
+        name: input your  name
+>>>>>>> 744e6d1d2dbae52e94b5e5fa3365be7ad8fc169e
     """
     __tablename__ = "cities"
     name = Column(String(128), nullable=False)
